@@ -1,0 +1,262 @@
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop
+$ git clone https://github.com/BasitIbnRazzaq/Week12S2Css.git
+Cloning into 'Week12S2Css'...
+warning: You appear to have cloned an empty repository.
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop
+$ cd Week12S2Css
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (main)
+$ git branch -m develop
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ git config --local user.name "Basit"
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ git config --local user.email "l1f21bsse0513@ucp.edu.pk"
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ git config --local core.editor notepad
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ node -v
+v20.18.0
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ mkdir ./src ./styles
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ touch .gitignore
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ code .
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ code .
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ npm init -y
+Wrote to C:\Users\l1f21bsse0513\Desktop\Week12S2Css\package.json:
+
+{
+  "name": "week12s2css",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+
+
+
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ code .
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ git status
+On branch develop
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        package.json
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ git add .
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ git commit -m "initial commit"
+[develop (root-commit) 8989a00] initial commit
+ 2 files changed, 13 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 package.json
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ git remote -v
+origin  https://github.com/BasitIbnRazzaq/Week12S2Css.git (fetch)
+origin  https://github.com/BasitIbnRazzaq/Week12S2Css.git (push)
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ git push origin develop
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 422 bytes | 422.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/BasitIbnRazzaq/Week12S2Css.git
+ * [new branch]      develop -> develop
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ git branch feature/ci-wf
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ git switch  feature/ci-wf
+Switched to branch 'feature/ci-wf'
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/ci-wf)
+$ mkdir -p ./.github/workflows
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/ci-wf)
+$ touch  ./.github/workflows/ci.yaml
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/ci-wf)
+$ code .
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/ci-wf)
+$ touch .htmlhintrc.json .stylelintrc.json
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/ci-wf)
+$ git status
+On branch feature/ci-wf
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .github/
+        .htmlhintrc.json
+        .stylelintrc.json
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/ci-wf)
+$ git add .
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/ci-wf)
+$ git commit -m "add ci.yaml , .htmlhintrc.json , .stylelintrc.json"
+[feature/ci-wf 5b0cf37] add ci.yaml , .htmlhintrc.json , .stylelintrc.json
+ 3 files changed, 34 insertions(+)
+ create mode 100644 .github/workflows/ci.yaml
+ create mode 100644 .htmlhintrc.json
+ create mode 100644 .stylelintrc.json
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/ci-wf)
+$ git push origin feature/ci-wf
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 831 bytes | 831.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'feature/ci-wf' on GitHub by visiting:
+remote:      https://github.com/BasitIbnRazzaq/Week12S2Css/pull/new/feature/ci-wf
+remote:
+To https://github.com/BasitIbnRazzaq/Week12S2Css.git
+ * [new branch]      feature/ci-wf -> feature/ci-wf
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/ci-wf)
+$ git switch develop
+Switched to branch 'develop'
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ git pull origin develop
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 931 bytes | 232.00 KiB/s, done.
+From https://github.com/BasitIbnRazzaq/Week12S2Css
+ * branch            develop    -> FETCH_HEAD
+   8989a00..a93280c  develop    -> origin/develop
+Updating 8989a00..a93280c
+Fast-forward
+ .github/workflows/ci.yaml | 25 +++++++++++++++++++++++++
+ .htmlhintrc.json          |  3 +++
+ .stylelintrc.json         |  6 ++++++
+ 3 files changed, 34 insertions(+)
+ create mode 100644 .github/workflows/ci.yaml
+ create mode 100644 .htmlhintrc.json
+ create mode 100644 .stylelintrc.json
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ git branch feature/index
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (develop)
+$ git switch feature/index
+Switched to branch 'feature/index'
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/index)
+$ touch ./src/index.html ./styles/index.css
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/index)
+$ git add .
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/index)
+$ git commit -m "add index.html and index.css"
+[feature/index c487b4e] add index.html and index.css
+ 2 files changed, 16 insertions(+)
+ create mode 100644 src/index.html
+ create mode 100644 styles/index.css
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/index)
+$ git push origin feature/index
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 647 bytes | 647.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'feature/index' on GitHub by visiting:
+remote:      https://github.com/BasitIbnRazzaq/Week12S2Css/pull/new/feature/index
+remote:
+To https://github.com/BasitIbnRazzaq/Week12S2Css.git
+ * [new branch]      feature/index -> feature/index
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/index)
+$ code .
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/index)
+$ git add .
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/index)
+$ git commit -m " modify index.html and index.css"
+[feature/index 0243a3f]  modify index.html and index.css
+ 2 files changed, 2 insertions(+), 3 deletions(-)
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/index)
+$ git push origin feature/index
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 490 bytes | 490.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/BasitIbnRazzaq/Week12S2Css.git
+   c487b4e..0243a3f  feature/index -> feature/index
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/index)
+$ git add .
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/index)
+$ git commit -m "modification 1 index.html and index.css"
+[feature/index 6193481] modification 1 index.html and index.css
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/index)
+$ git push origin feature/index
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 368 bytes | 368.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/BasitIbnRazzaq/Week12S2Css.git
+   0243a3f..6193481  feature/index -> feature/index
+
+l1f21bsse0513@UCP-LBA-204-11 MINGW64 ~/Desktop/Week12S2Css (feature/index)
+$
